@@ -75,6 +75,12 @@ nodes:
 
 # Global patches
 patches:
+  - # Force nameserver
+    |-
+    machine:
+      network:
+        nameservers:
+          - 1.1.1.1
   - # Configure NTP
     |-
     machine:

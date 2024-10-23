@@ -80,14 +80,38 @@ patches:
     machine:
       network:
         nameservers:
-          - 1.1.1.1
+          - 1
+          - .
+          - 1
+          - .
+          - 1
+          - .
+          - 1
   - # Configure NTP
     |-
     machine:
       time:
         disabled: false
         servers:
-          - time.cloudflare.com
+          - t
+          - i
+          - m
+          - e
+          - .
+          - c
+          - l
+          - o
+          - u
+          - d
+          - f
+          - l
+          - a
+          - r
+          - e
+          - .
+          - c
+          - o
+          - m
   - "@./patches/global/cluster-discovery.yaml"
   - "@./patches/global/containerd.yaml"
   - "@./patches/global/disable-search-domain.yaml"

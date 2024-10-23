@@ -75,18 +75,27 @@ nodes:
 
 # Global patches
 patches:
-  - # Force nameserver
+  - # Configure NTP
     |-
     machine:
-      network:
-        nameservers:
+      time:
+        disabled: false
+        servers:
+          - 1
+          - 3
           - 1
           - .
-          - 1
+          - 2
+          - 3
+          - 4
           - .
-          - 1
+          - 2
+          - 2
+          - 0
           - .
-          - 1
+          - 2
+          - 4
+          - 2
   - "@./patches/global/cluster-discovery.yaml"
   - "@./patches/global/containerd.yaml"
   - "@./patches/global/disable-search-domain.yaml"
